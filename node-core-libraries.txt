@@ -39,6 +39,7 @@ const port = 3000;
 
 const requestHandler = (request, response) => {
   response.end(`Handling a request on port ${port}`)
+  fs. writeFile('hello-world.txt', 'Hello to this great world', 'utf8')
 };
 
 const server = http.createServer(requestHandler);
@@ -52,6 +53,6 @@ server.listen(port, (err) => {
 });
 
 
-fs. writeFile('hello-world.txt', 'Hello to this great world', 'utf8')
+
 
 
